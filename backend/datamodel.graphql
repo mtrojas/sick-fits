@@ -1,5 +1,20 @@
+# Prisma
 type User {
   id: ID! @unique @id
   name: String!
   email: String!
 }
+
+type Item {
+  id: ID! @unique @id
+  title: String!
+  description: String!
+  image: String
+  largeImage: String
+  price: Int!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
+  # user: User!
+}
+
+# Remember! Every time you make a change to this file, you have to deploy it to Prisma.
