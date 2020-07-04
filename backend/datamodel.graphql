@@ -25,9 +25,7 @@ type Item {
   image: String
   largeImage: String
   price: Int!
-  # createdAt: DateTime!
-  # updatedAt: DateTime!
-  # user: User!
+  user: User!
 }
 
 # Remember! Every time you make a change to this file, you have to deploy it to Prisma.
