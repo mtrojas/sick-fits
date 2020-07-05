@@ -35,6 +35,7 @@ type Query {
   item(where: ItemWhereUniqueInput!): Item
   itemsConnection(where: ItemWhereInput): ItemConnection!
   me: User
+  users: [User]!
 }
 
 type User {
@@ -44,4 +45,4 @@ type User {
   permissions: [Permission!]!
 }
 
-# Public facing API, interfaces with JS (Yoga)
+# Public facing API, interfaces with JS (this is Yoga)
