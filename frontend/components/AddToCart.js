@@ -1,3 +1,4 @@
+// TODO Use optimistic response and update function to reduce time in adding to cart.
 import React from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -15,6 +16,7 @@ const ADD_TO_CART_MUTATION = gql`
 class AddToCart extends React.Component {
   render() {
     const{ id } = this.props;
+
     return (
       <Mutation
         mutation={ADD_TO_CART_MUTATION}
