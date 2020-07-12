@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import CreateItem from '../components/CreateItem';
+import PleaseSignIn from '../components/PleaseSignIn';
 
 const Sell = props => (
 	<div>
-  	<p>Sell!</p>
-    	<Link href="/">
-      	<a>Home!</a>
-      </Link>
+    <PleaseSignIn>
+  	  <CreateItem />
+    </PleaseSignIn>
   </div>
 );
 
