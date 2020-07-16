@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { format } from 'date-fns';
@@ -30,7 +30,7 @@ const SINGLE_ORDER_QUERY = gql`
   }
 `;
 
-class Order extends Component {
+class Order extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired
   }
