@@ -39,12 +39,27 @@ const Query = {
     }, info);
     // Check if they have the permissions to see this order
     const ownsOrder = order.user.id === ctx.request.userId;
+    // CHECK THIS BUG!! IF I PUT hasPermissionToSeeOrder in the if statement it show the error always
     const hasPermissionToSeeOrder = ctx.request.user.permissions.includes('ADMIN');
     if(!ownsOrder || !hasPermission) {
       throw new Error('You can\'t see this buddd');
     }
     // Return the order
     return order;
+  },
+
+  async orders(parent, args, ctx, info) {
+    // Query the users id
+    const { userId } = ctx.request;
+    // Make sure they are logged in
+    if(!userId) {
+      throw new Error('You must be signed in!');
+    }
+    return ctx.db.query.orders({
+      where: {
+        user: { id: userId }
+      }
+    }, info)
   }
 };
 
