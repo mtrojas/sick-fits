@@ -53,6 +53,8 @@ type Order {
   total: Int!
   user: User!
   charge: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 }
 
 # Remember! Every time you make a change to this file, you have to deploy it to Prisma.
